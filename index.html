@@ -49,41 +49,44 @@
             height: 100svh;
         }
 
-        .parallax {
-          /* The image used */
-          background-image: url("images/ihs-cave-center.jpg");
+        .hero {
+          background-image: url('img_parallax.jpg');
+          height: 100%; 
         
-          /* Full height */
-          height: 100vh; 
-        
-          /* Create the parallax scrolling effect */
           background-attachment: fixed;
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
         }
 
-
-        .hero-img, .hero-header{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .hero-img {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            overflow: hidden;
-        }
-
-        .hero-header{
-            padding: 2.5rem;
+        .hero-text {
+        	height:100vh;
+            background-image: url('img_parallax.jpg');
             display:flex;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
-            align-items: flex-end;
-            text-shadow: 0 0px 8px rgba(0, 0, 0, 30);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
+        .hero-text.unfixed {
+            background-attachment: scroll;
+        }
+        
+        
+        .hero-text h1 {
+        	font-family: "Oswald", sans-serif;
+        	font-size: 4rem;
+            margin:0;
+          }
+        .hero-text h2 {
+        	font-family: "Minecraft", sans-serif;
+        	font-size: 2.5rem;
+            margin:0;
+          }
+        
 
         .screenshots, .credits, .tools {
             display: flex;
@@ -137,10 +140,10 @@
             }
             h2 {
                 font-size: 1.5rem;
-            }
+            /* }
             .hero {
                 z-index: 2;
-            }
+            } */
             .screenshots-images-col {
                 margin-top: 30rem;
             }
@@ -165,17 +168,21 @@
         </a>
     </header>
 
-    <section class="parallax"></section>
+    <div class="hero"></div>
+
+    <div class="hero-text">
+    	<h1>IRVINGTON HIGH SCHOOL</h1>
+        <h2>...but in Minecraft</h2>
+    </div>
+
+    <!-- <section class="parallax"></section>
     
     <section class="parallax">
-        <!-- <div class="hero-img">
-            <img src="images/ihs-cave-center.jpg",alt="">
-        </div> -->
         <div class="hero-header">
             <h1>IRVINGTON HIGH SCHOOL</h1>
             <h2>...but in Minecraft</h2>
         </div>
-    </section>
+    </section> -->
 
     
 
