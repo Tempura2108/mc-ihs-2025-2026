@@ -1,246 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irvington High School but in Minecraft</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/favicon-lime-shadow.png">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        @font-face {
-            font-family: 'Minecraft';
-            src: url('fonts/Minecraft.ttf') format('truetype');
-        }
-
-        /* Default */
-        body {
-            font-family: "Inter", sans-serif;
-            /* background: #322d2b; */
-            background: #000000;
-            color: #f5f5f5;
-            text-align: center;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        h1 {
-            font-family: "Oswald", sans-serif;
-            font-size: 4rem;
-        }
-        h2 {
-            font-family: "Minecraft", sans-serif;
-            font-size: 2.5rem;
-        }
-
-        section {
-            position: relative;
-            width: 100%;
-            height: 100svh;
-        }
-
-        .hero {
-          background-image: url('images/ihs-cave-center.jpg');
-          height: 100%; 
-        
-          background-attachment: fixed;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-
-        .hero-text {
-        	height:100vh;
-            background-image: url('images/ihs-cave-center.jpg');
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .hero-text.unfixed {
-            background-attachment: scroll;
-        }
-        
-        
-        .hero-text h1 {
-        	font-family: "Oswald", sans-serif;
-        	font-size: 4rem;
-            margin:0;
-          }
-        .hero-text h2 {
-        	font-family: "Minecraft", sans-serif;
-        	font-size: 2.5rem;
-            margin:0;
-          }
-        
-
-        .screenshots, .credits, .tools {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .screenshots {
-            margin-top: 25svh;
-            gap: 2rem;
-            padding: 3rem 2rem;
-        }
-
-        .screenshot-images {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            padding: 1.5rem;
-        }
-        .screenshots img {
-            width: 100%;
-            height: auto;
-            max-width: 40rem;
-            object-fit: cover;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
 
 
+body, html {
+  height: 100%;
+}
+
+.parallax-text {
+	height:100vh;
+    background-image: url('images/ihs-cave-center.jpg');
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-text.unfixed {
+    background-attachment: scroll;
+}
 
 
-        .site-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 10px;
-            z-index: 9999; /* keeps it above everything */
-        }
+.parallax-text h1 {
+	font-family: "Oswald", sans-serif;
+	font-size: 4rem;
+    margin:0;
+  }
+.parallax-text h2 {
+	font-family: "Inter", sans-serif;
+	font-size: 2.5rem;
+    margin:0;
+  }
+
+.parallax {
+  /* The image used */
+  background-image: url('images/ihs-cave-center.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
-        .logo {
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            margin-right: 10px;
-            
-        }
-
-        @media (max-width: 800px) {
-            h1 {
-                font-size: 3rem;
-            }
-            h2 {
-                font-size: 1.5rem;
-            /* }
-            .hero {
-                z-index: 2;
-            } */
-            .screenshots-images-col {
-                margin-top: 30rem;
-            }
-            .screenshot-images {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 1.5rem 0;
-                text-shadow: 0 0px 8px rgba(0, 0, 0, 30);
-            }
-        }
-        
-
-    </style>
+</style>
 </head>
-    
-<body id="top">
+<body>
 
-    <header class="site-header">
-        <a href="#top">
-            <img src="images/favicon-lime-shadow.png" alt="logo" class="logo"> 
-        </a>
-    </header>
+<div class="parallax"></div>
 
-    <div class="hero"></div>
+<div class="parallax-text">
+	<h1>words words words</h1>
+    <h2>even more words</h2>
+</div>
 
-    <div class="hero-text">
-    	<h1>IRVINGTON HIGH SCHOOL</h1>
-        <h2>...but in Minecraft</h2>
-    </div>
+<div style="height:40rem;background-color:red;font-size:36px">
+paragraphs
+</div>
 
-    <!-- <section class="parallax"></section>
-    
-    <section class="parallax">
-        <div class="hero-header">
-            <h1>IRVINGTON HIGH SCHOOL</h1>
-            <h2>...but in Minecraft</h2>
-        </div>
-    </section> -->
+<script>
+document.addEventListener("scroll", () => {
+    const section = document.querySelector(".parallax-text");
+    const rect = section.getBoundingClientRect();
 
-    
+    // If the bottom of the section hits the bottom of the viewport
+    if (rect.bottom <= window.innerHeight) {
+        section.classList.add("unfixed");
+    } else {
+        section.classList.remove("unfixed");
+    }
+});
+</script>
 
-    <!-- <section id="screenshots" class="screenshots">
-        <div class="screenshot-images-col">
-            <div class="screenshot-images">
-                <img src="images/screenshots/courtyard-ihs.jpg",alt="">
-                <img src="images/screenshots/courtyard-mc.jpg",alt="">
-            </div>
-            <div class="screenshot-images">
-                <img src="images/screenshots/portables-ihs.jpg",alt="">
-                <img src="images/screenshots/portables-mc.jpg",alt="">
-            </div>
-        </div>
-    </section>
 
-    <section id="credits" class="credits">
-        <div class="credit-text">
-            
-        </div>
-    </section>
 
-    <section class="tools">
-        <div class="tools-logo">
-            
-        </div>
-    </section>
-
-    <section class="outro">
-        <div class="outro-text">
-            
-        </div>
-    </section> -->
-
-    
-
-    
-    <main>
-        <h3>website under development or smth</h3>
-        <p>will add more stuff and credits later...prolly</p>
-    </main>
-
-    <footer>
-        <p>words</p>
-    </footer>
-
-    <script>
-        document.addEventListener("scroll", () => {
-            const section = document.querySelector(".hero-text");
-            const rect = section.getBoundingClientRect();
-        
-            // If the bottom of the section hits the bottom of the viewport
-            if (rect.bottom <= window.innerHeight) {
-                section.classList.add("unfixed");
-            } else {
-                section.classList.remove("unfixed");
-            }
-        });
-        </script>
 </body>
 </html>
