@@ -81,22 +81,20 @@
             margin-top: 275svh;
         }
 
-        .screenshot-images {
+        .screenshot-images-col img {
             width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 4rem;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
         }
 
+
         .screenshot-images-col {
-            position: relative;
-            height: 125%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
         }
+
 
         .site-header {
             position: fixed;
