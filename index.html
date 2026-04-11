@@ -43,19 +43,21 @@
         /* Hero  */
         .hero {
             position: relative;
-            height: 100vh;
+            width: 100%;
+            /* height:100%; */
+            aspect-ratio: 16 / 9;
             overflow: hidden;
             background: #000000;
             z-index: 0;
         }
         
         .hero img {
-            position: relative;
+            position: absolute;
             top: 80px;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             z-index: -1;
         }
         
