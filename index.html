@@ -66,6 +66,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -228,5 +229,19 @@
     <footer>
         <p>words</p>
     </footer>   
+
+    <script>
+        document.addEventListener("scroll", () => {
+            const section = document.querySelector(".hero-text");
+            const rect = section.getBoundingClientRect();
+        
+            // If the bottom of the section hits the bottom of the viewport
+            if (rect.bottom <= window.innerHeight) {
+                section.classList.add("unfixed");
+            } else {
+                section.classList.remove("unfixed");
+            }
+        });
+        </script>
 </body>
 </html>
