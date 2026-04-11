@@ -44,7 +44,7 @@
 
         .hero {
             position: relative;
-            height: 100vh; /* full screen */
+            width: 100vh; /* full screen */
             background-image: url('images/ihs-cave-center.jpg');
             background-size: cover;       /* fills screen */
             background-position: center;  /* keeps subject centered */
@@ -65,11 +65,22 @@
 
         /* new */
         .hero-content {
-            position: sticky;
-            top: 30vh; /* where the text stops */
-            transform: translateY(20vh); /* where the text starts */
-            transition: transform 0.3s ease-out;
+            animation: rise 1 both;
+            animation-timeline: scroll();
         }
+
+        @keyframes rise {
+            from {
+                transform: translateY(40vh); /* starts near bottom */
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0); /* ends centered */
+                opacity: 1;
+            }
+        }
+
+
 
         
         .hero img {
