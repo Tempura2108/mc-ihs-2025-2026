@@ -84,7 +84,7 @@
           }
         
 
-        .screenshots, .credits, .methodology {
+        .screenshots, .credits, .methodology, .outro {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -110,6 +110,17 @@
             object-fit: cover;
         }
 
+		.methodology img {
+			width: 100%;
+			height: auto;
+			max-width: 100vw;
+			object-fit: cover;
+		}
+
+
+		.outro {
+			margin-bottom: 20rem;
+		}
 
 
 
@@ -118,7 +129,7 @@
             top: 0;
             left: 0;
             padding: 10px;
-            z-index: 9999; /* keeps it above everything */
+            z-index: 9999;
         }
 
 
@@ -127,7 +138,6 @@
             height: 40px;
             object-fit: cover;
             margin-right: 10px;
-            
         }
 
         @media (max-width: 1000px) {
@@ -205,6 +215,9 @@
         <div class="credit-text">
             
         </div>
+		<div class="credit-images">
+			<img src="images/map-ihs-green-theater-simple.jpg",alt="">
+		</div>
     </section>
 
     <section class="methodology">
@@ -215,22 +228,13 @@
 
     <section class="outro">
         <div class="outro-text">
-            
+            <h3>website under development or smth</h3>
+        	<p>will add more stuff and credits later...prolly</p>
         </div>
     </section>
 
-    
 
-    
-    <main>
-        <h3>website under development or smth</h3>
-        <p>will add more stuff and credits later...prolly</p>
-    </main>
-
-    <footer>
-        <p>words</p>
-    </footer>
-
+	
     <script>
         document.addEventListener("scroll", () => {
             const section = document.querySelector(".hero-text");
