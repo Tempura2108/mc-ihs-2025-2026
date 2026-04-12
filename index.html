@@ -120,6 +120,89 @@
 			object-fit: cover;
 		}
 
+
+
+
+		section#interactive-map {
+		    width: 100%;
+		    padding: 4rem 0; /* optional spacing */
+		    display: flex;
+		    justify-content: center;
+		}
+		
+		.map-container {
+		    position: relative;
+		    width: 100%;
+		    max-width: 900px;
+		}
+		
+		.map {
+		    width: 100%;
+		    display: block;
+		}
+		
+		/* Callout positioning */
+		.callout {
+		    position: absolute;
+		    width: 0;
+		    height: 0;
+		    opacity: 0;
+		    transform: translateY(20px);
+		    transition: 0.4s ease;
+		}
+		
+		/* Reveal animation */
+		.callout.visible {
+		    opacity: 1;
+		    transform: translateY(0);
+		}
+		
+		/* Line from hotspot to box */
+		.line {
+		    position: absolute;
+		    width: 2px;
+		    height: 80px;
+		    background: white;
+		    left: 0;
+		    top: 0;
+		    transform: translateX(-50%);
+		}
+		
+		/* Info box */
+		.box {
+		    position: absolute;
+		    top: 80px;
+		    left: -150px;
+		    width: 300px;
+		    background: rgba(0,0,0,0.85);
+		    border: 2px solid white;
+		    border-radius: 10px;
+		    padding: 1rem;
+		}
+		
+		.photos {
+		    display: flex;
+		    gap: 0.5rem;
+		}
+		
+		.photos img {
+		    width: 50%;
+		    border-radius: 6px;
+		    object-fit: cover;
+		}
+		
+		.box p {
+		    margin-top: 0.5rem;
+		    font-size: 0.9rem;
+		}
+
+
+
+
+
+
+		
+
 		.methodology img {
 			width: 100%;
 			height: auto;
@@ -208,7 +291,7 @@
 
     
 
-    <section id="screenshots" class="screenshots">
+    <!-- <section id="screenshots" class="screenshots">
         <div class="screenshot-images-col">
             <div class="screenshot-images">
                 <img src="images/screenshots/courtyard-ihs.jpg",alt="">
@@ -219,16 +302,49 @@
                 <img src="images/screenshots/portables-mc.jpg",alt="">
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section id="credits" class="credits">
+	<section id="map">
+	    <div class="map-container">
+	        <img src="images/map-ihs-green-theater-simple.jpg" alt="" class=map>
+	
+	        <!-- Callout 1 -->
+	        <div class="callout" style="top: 20%; left: 60%;">
+	            <div class="line"></div>
+	            <div class="box">
+	                <div class="photos">
+	                    <img src="images/screenshots/courtyard-ihs.jpg",alt="">
+	                <img src="images/screenshots/courtyard-mc.jpg",alt="">
+	                </div>
+	                <p>Courtyard area</p>
+	            </div>
+	        </div>
+	
+	        <!-- Callout 2 -->
+	        <div class="callout" style="top: 50%; left: 30%;">
+	            <div class="line"></div>
+	            <div class="box">
+	                <div class="photos">
+	                    <img src="images/screenshots/portables-ihs.jpg",alt="">
+                <img src="images/screenshots/portables-mc.jpg",alt="">
+	                </div>
+	                <p>Portables</p>
+	            </div>
+	        </div>
+	
+	        <!-- Add more callouts here -->
+	    </div>
+	</section>
+
+
+    <!-- <section id="credits" class="credits">
         <div class="credit-text">
             
         </div>
 		<div class="credit-images">
 			<img src="images/map-ihs-green-theater-simple.jpg",alt="">
 		</div>
-    </section>
+    </section> -->
 
     <section class="methodology">
         <div class="methodology-images">
@@ -257,6 +373,19 @@
                 section.classList.remove("unfixed");
             }
         });
+
+		const callouts = document.querySelectorAll('.callout');
+		
+		const observer = new IntersectionObserver(entries => {
+		    entries.forEach(entry => {
+		        if (entry.isIntersecting) {
+		            entry.target.classList.add('visible');
+		        }
+		    });
+		}, { threshold: 0.2 });
+		
+		callouts.forEach(c => observer.observe(c));
+
         </script>
 </body>
 </html>
